@@ -16,7 +16,7 @@ const createTodo = async (req, res, next) => {
 const getTodos = async (req, res, next) => {
     try {
         const todo = await Todo.find()
-        res.json(todos);
+        res.json(todo);
     } catch (error) {
         next(error)
     }
