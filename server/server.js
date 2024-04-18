@@ -21,7 +21,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/goi')
 
 app.use('/api', todoRoutes);
 
-app.use((err, req, res, next => {
+app.use((err, req, res, next) => {
     console.error(err.stack)
     res.status(err.status || 500).json({ error: 'Internal Server Error' });
-}));
+});
