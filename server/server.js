@@ -16,7 +16,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/goi')
     console.log('MongoDB connected')
 })
 .catch((error) => {
-    console.log(error)
+    console.error('Error connecting to MongoDB',error)
 })
 
 app.use('/api', todoRoutes);
